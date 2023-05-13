@@ -1,9 +1,9 @@
+import { createTodo } from '@/lib/prisma/todo';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
+  const todo = await createTodo(body);
 
-  console.log(body);
-
-  return NextResponse.json({ message: 'Hello World!' });
+  return NextResponse.json({ todo });
 }
