@@ -1,10 +1,12 @@
 import Form from '@/components/Form';
+import Todos from '@/components/Todos';
 
 export default function Home() {
   return (
-    <main className='flex justify-center m-10 h-72 text-white'>
+    <main className='flex flex-col items-center space-y-16 my-16 mx-10 text-white'>
       <Form />
-      <div></div>
+      {/* @ts-expect-error Server Component */}
+      <Todos />
     </main>
   );
 }

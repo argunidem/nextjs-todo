@@ -10,5 +10,7 @@ export async function createTodo(data: { todo: string; isComplete: boolean }) {
     });
 
     return todo;
-  } catch (error) {}
+  } catch (error) {
+    console.log(error);
+  }
 }
